@@ -1,0 +1,17 @@
+<body>
+
+<p id="saat"></p>
+</body>
+<script language="JavaScript">
+function tarihsaat() {
+   	window.setTimeout( "tarihsaat()", 1000 );
+     zaman = new Date();
+   tarihvesaat="Bugün: "+zaman.toLocaleDateString() +"-"+ zaman.toLocaleTimeString();
+
+   if(document.all || document.getElementById){
+      document.getElementById("saat").innerHTML = tarihvesaat.toString();
+   }else{   
+      self.status = tarihvesaat.toString();
+  	 }}
+tarihsaat()
+</script>
